@@ -1,4 +1,4 @@
-require 'ping' if RUBY_VERSION.split('.')[1].to_i <= 8
+require 'ping'
 
 module Kernel
   private
