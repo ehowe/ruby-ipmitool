@@ -1,5 +1,3 @@
-require 'ping'
-
 module Kernel
   private
     def this_method_name
@@ -49,7 +47,13 @@ class Ipmitool
 
   #Run a ping check to see if the host is responding
   def check_host
-    return Ping.pingecho(@conn[:host], 2)
+    result = `ping -q -c 2 #{@conn[:host]}`
+    if ($?.exitstatus == 0) do
+      pingable = true
+    else
+      pingable = false
+    end
+    pingable
   end
 
   #Read sensor data from ipmitool and return a hash containing the value
