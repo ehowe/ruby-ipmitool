@@ -48,7 +48,7 @@ class Ipmitool
   #Run a ping check to see if the host is responding
   def check_host
     result = `ping -q -c 2 #{@conn[:host]}`
-    if ($?.exitstatus == 0) do
+    if ($?.exitstatus == 0) then
       pingable = true
     else
       pingable = false
@@ -182,7 +182,7 @@ class Ipmitool
 
   private
   def run_command(command, *args)
-    `#{@conn[:binary]} -H #{@conn[:host]} -U #{@conn[:user]} -P #{@conn[:password]} #{command} #{args unless args.nil?}`.downcase!
+    `#{@conn[:binary]} -H #{@conn[:host]} -U #{@conn[:user]} -P #{@conn[:password]} #{command} #{args unless args.size == 0}`.downcase!
   end
 
   def split_output(array, delimiter)
