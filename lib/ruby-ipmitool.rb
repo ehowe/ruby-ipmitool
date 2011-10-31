@@ -25,7 +25,7 @@ For more information on the output and its meanings, see the official ipmitool m
 =end
 
 class Ipmitool
-    attr_reader :conn
+  attr_reader :conn
 
   #Instantiates a new Ipmitool object.  Takes a hash containing :host, :user, and :password.
   #
@@ -48,7 +48,7 @@ class Ipmitool
   #Run a ping check to see if the host is responding
   def check_host
     result = `ping -q -c 2 #{@conn[:host]}`
-     # return true or false if exit status is 0
+    # return true or false if exit status is 0
     $?.exitstatus == 0
   end
 
@@ -178,14 +178,14 @@ class Ipmitool
 
   private
   def run_command(command, *args)
-    $optional=''
-    if @conn.optional
-        @conn.optional.each { |key, value|
-            $optional << "-#{key} #{value}"
+    optional = []
+    if @conn[:optional]
+        @conn[:optional].each { |key, value|
+            optional << "-#{key} #{value}"
         }
     end
-            
-    `#{@conn[:binary]} #{$optional} -H #{@conn[:host]} -U #{@conn[:user]} -P #{@conn[:password]} #{command} #{args unless args.nil?}`
+
+    `#{@conn[:binary]} #{optional.join(" ")} -H #{@conn[:host]} -U #{@conn[:user]} -P #{@conn[:password]} #{command} #{args unless args.nil?}`.downcase!
   end
 
   def split_output(array, delimiter)

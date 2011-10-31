@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
 s.name = %q{ruby-ipmitool}
-s.version = "0.4.1"
+s.version = "0.5"
 s.has_rdoc = true
 s.author = "Eugene Howe"
 s.summary = "Wrapper for the linux ipmitool command"
