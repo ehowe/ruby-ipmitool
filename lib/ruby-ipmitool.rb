@@ -48,12 +48,8 @@ class Ipmitool
   #Run a ping check to see if the host is responding
   def check_host
     result = `ping -q -c 2 #{@conn[:host]}`
-    if ($?.exitstatus == 0) do
-      pingable = true
-    else
-      pingable = false
-    end
-    pingable
+     # return true or false if exit status is 0
+    $?.exitstatus == 0
   end
 
   #Read sensor data from ipmitool and return a hash containing the value
