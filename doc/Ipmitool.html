@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  <title>Class: Ipmitool</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./lib/ruby-ipmitool_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/ruby-ipmitool.rb">lib/ruby-ipmitool.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-channel">#channel</a></li>
+          
+          <li><a href="#method-i-chassis">#chassis</a></li>
+          
+          <li><a href="#method-i-check_host">#check_host</a></li>
+          
+          <li><a href="#method-i-power">#power</a></li>
+          
+          <li><a href="#method-i-sdr">#sdr</a></li>
+          
+          <li><a href="#method-i-sel">#sel</a></li>
+          
+          <li><a href="#method-i-sensor">#sensor</a></li>
+          
+          <li><a href="#method-i-user">#user</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./Hash.html">Hash</a></li>
+        
+          <li><a href="./Ipmitool.html">Ipmitool</a></li>
+        
+          <li><a href="./Kernel.html">Kernel</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">Ipmitool</h1>
+
+    <div id="description" class="description">
+      
+<p>This utility wraps the UNIX ipmitool command to provide common functions</p>
+
+<p>All methods in this class return a hash, which can be read as accessors.</p>
+
+<p>For more information on the output and its meanings, see the official
+ipmitool man page at <a
+href="http://ipmitool.sourceforge.net/manpage.html">ipmitool.sourceforge.net/manpage.html</a></p>
+
+    </div><!-- description -->
+
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="conn-attribute-method" class="method-detail">
+          <a name="conn"></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">conn</span><span
+              class="attribute-access-type">[R]</span>
+          </div>
+
+          <div class="method-description">
+          
+          
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="channel-method" class="method-detail ">
+          <a name="method-i-channel"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">channel</span><span
+              class="method-args">(channel_command, *command_args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Set channel options, including authentication.  For options that require
+more than 1 option, that should be specified as separate options to the
+method.</p>
+
+<p>Ex. ipmi.channel(“getciphers”, “ipmi”, “1”).inspect</p>
+
+<p>The setaccess function gives no output</p>
+            
+
+            
+            <div class="method-source-code" id="channel-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-ipmitool.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">channel</span>(<span class="ruby-identifier">channel_command</span>, *<span class="ruby-identifier">command_args</span>)
+  <span class="ruby-identifier">channel_hash</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">channel_command</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;authcap&quot;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Authcap requires a channel number and privilege&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">command_args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">channel_output</span> = <span class="ruby-identifier">run_command</span>(<span class="ruby-identifier">this_method_name</span>, <span class="ruby-node">&quot;#{channel_command} #{command_args.join(' ')}&quot;</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">channel_hash</span> = <span class="ruby-identifier">split_output</span>(<span class="ruby-identifier">channel_output</span>, <span class="ruby-string">':'</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;getaccess&quot;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Authcap requires a channel number and uid&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">command_args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">user_hash</span> = <span class="ruby-identifier">user</span>(<span class="ruby-string">&quot;list&quot;</span>, <span class="ruby-identifier">command_args</span>[<span class="ruby-value">0</span>])
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Invalid user specified&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user_hash</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-node">&quot;uid#{command_args[1]}&quot;</span>.<span class="ruby-identifier">to_sym</span>)
+    <span class="ruby-identifier">channel_output</span> = <span class="ruby-identifier">run_command</span>(<span class="ruby-identifier">this_method_name</span>, <span class="ruby-node">&quot;#{channel_command} #{command_args.join(' ')}&quot;</span>)
+    <span class="ruby-identifier">channel_hash</span> = <span class="ruby-identifier">split_output</span>(<span class="ruby-identifier">channel_output</span>, <span class="ruby-string">':'</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;setaccess&quot;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Authcap requires a channel number, uid, and privilege level&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">command_args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">user_hash</span> = <span class="ruby-identifier">user</span>(<span class="ruby-string">&quot;list&quot;</span>, <span class="ruby-identifier">command_args</span>[<span class="ruby-value">0</span>])
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Invalid user specified&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">user_hash</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-node">&quot;uid#{command_args[1]}&quot;</span>.<span class="ruby-identifier">to_sym</span>)
+    <span class="ruby-identifier">command_args</span>[<span class="ruby-value">2</span>] = <span class="ruby-node">&quot;privilege=#{command_args[2]}&quot;</span>
+    <span class="ruby-identifier">run_command</span>(<span class="ruby-identifier">this_method_name</span>, <span class="ruby-node">&quot;#{channel_command} #{command_args.join(' ')}&quot;</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;info&quot;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Info requires a channel number&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">command_args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">channel_output</span> = <span class="ruby-identifier">run_command</span>(<span class="ruby-identifier">this_method_name</span>, <span class="ruby-node">&quot;#{channel_command} #{command_args}&quot;</span>)
+    <span class="ruby-identifier">channel_output</span> = <span class="ruby-identifier">channel_output</span>.<span class="ruby-identifier">grep</span>(<span class="ruby-regexp">/:/</span>).<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">strip!</span> }.<span class="ruby-identifier">delete_if</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/:$/</span> }
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">channel_hash</span> = <span class="ruby-identifier">split_output</span>(<span class="ruby-identifier">channel_output</span>, <span class="ruby-string">':'</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;getciphers&quot;</span>
+     <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Info requires a protocol and channel number&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">command_args</span>.<span class="ruby-identifier">empty?</span>
+     <span class="ruby-identifier">channel_output</span> = <span class="ruby-identifier">run_command</span>(<span class="ruby-identifier">this_method_name</span>, <span class="ruby-node">&quot;#{channel_command} #{command_args.join(' ')}&quot;</span>).<span class="ruby-identifier">grep</span>(<span class="ruby-regexp">/^[0-9]/</span>)
+     <span class="ruby-identifier">channel_output</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">channel_hash</span>[<span class="ruby-node">&quot;id#{c.split[0]}&quot;</span>.<span class="ruby-identifier">to_sym</span>] = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">split</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>] }
+     <span class="ruby-keyword">return</span> <span class="ruby-identifier">channel_hash</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Invalid Channel Command&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- channel-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- channel-method -->
+
+      
+        <div id="chassis-method" class="method-detail ">
+          <a name="method-i-chassis"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">chassis</span><span
+              class="method-args">(chassis_command, *command_args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Query and issue commands to the chassis itself.  Useful for powering a box
+on and off, resets, etc</p>
+
+<p>Ex ipmi.chassis(“power”, “on”).chassis_power_control</p>
+            
+
+            
+            <div class="method-source-code" id="chassis-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-ipmitool.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">chassis</span>(<span class="ruby-identifier">chassis_command</span>, *<span class="ruby-identifier">command_args</span>)
+  <span class="ruby-identifier">chassis_hash</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">chassis_command</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;status&quot;</span>, <span class="ruby-string">&quot;restart_cause&quot;</span>, <span class="ruby-string">&quot;poh&quot;</span>, <span class="ruby-string">&quot;selftest&quot;</span>
+    <span class="ruby-identifier">chassis_output</span> = <span class="ruby-identifier">run_command</span>(<span class="ruby-identifier">this_method_name</span>, <span class="ruby-identifier">chassis_command</span>)
+    <span class="ruby-identifier">chassis_output</span> = <span class="ruby-identifier">chassis_output</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+    <span class="ruby-identifier">chassis_hash</span> = <span class="ruby-identifier">split_output</span>(<span class="ruby-identifier">chassis_output</span>, <span class="ruby-string">':'</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;power&quot;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;#{chassis_command} requires an additional argument&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">command_args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">chassis_output</span> = <span class="ruby-identifier">run_command</span>(<span class="ruby-identifier">this_method_name</span>, <span class="ruby-node">&quot;#{chassis_command} #{command_args}&quot;</span>)
+    <span class="ruby-identifier">chassis_hash</span> = <span class="ruby-identifier">split_output</span>(<span class="ruby-identifier">chassis_output</span>.<span class="ruby-identifier">to_a</span>, <span class="ruby-string">&quot;:&quot;</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">chassis_hash</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;policy&quot;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Policy requires a state&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">command_args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">command_args</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">==</span> <span class="ruby-string">'list'</span>
+      <span class="ruby-identifier">chassis_output</span> = <span class="ruby-identifier">run_command</span>(<span class="ruby-identifier">this_method_name</span>, <span class="ruby-node">&quot;#{chassis_command} #{command_args}&quot;</span>)
+      <span class="ruby-identifier">chassis_hash</span> = <span class="ruby-identifier">split_output</span>(<span class="ruby-identifier">chassis_output</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;\n&quot;</span>), <span class="ruby-string">&quot;:&quot;</span>)
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">chassis_hash</span>[<span class="ruby-value">:result</span>] = <span class="ruby-identifier">run_command</span>(<span class="ruby-identifier">this_method_name</span>, <span class="ruby-node">&quot;#{chassis_command} #{command_args}&quot;</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&quot;\n&quot;</span>,<span class="ruby-string">&quot;&quot;</span>)
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">chassis_hash</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;bootdev&quot;</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;bootdev requires an additional argument&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">command_args</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">chassis_hash</span>[<span class="ruby-value">:result</span>] = <span class="ruby-identifier">run_command</span>(<span class="ruby-identifier">this_method_name</span>, <span class="ruby-node">&quot;#{chassis_command} #{command_args}&quot;</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&quot;\n&quot;</span>,<span class="ruby-string">&quot;&quot;</span>)
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">chassis_hash</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Invalid Chassis Command&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- chassis-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- chassis-method -->
+
+      
+        <div id="check_host-method" class="method-detail ">
+          <a name="method-i-check_host"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">check_host</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Run a ping check to see if the host is responding</p>
+            
+
+            
+            <div class="method-source-code" id="check_host-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-ipmitool.rb, line 49</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">check_host</span>
+  <span class="ruby-identifier">result</span> = <span class="ruby-node">`ping -q -c 2 #{@conn[:host]}`</span>
+  <span class="ruby-comment"># return true or false if exit status is 0</span>
+  <span class="ruby-identifier">$?</span>.<span class="ruby-identifier">exitstatus</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- check_host-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- check_host-method -->
+
+      
+        <div id="power-method" class="method-detail ">
+          <a name="method-i-power"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">power</span><span
+              class="method-args">(power_command)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Shortcut to ipmi.chassis(“power”).  Values returned are formatted
+exactly as ipmi.chassis.</p>
+
+<p>Ex. ipmi.power(“on”)</p>
+            
+
+            
+            <div class="method-source-code" id="power-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-ipmitool.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">power</span>(<span class="ruby-identifier">power_command</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">chassis</span>(<span class="ruby-string">&quot;power&quot;</span>, <span class="ruby-identifier">power_command</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- power-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- power-method -->
+
+      
+        <div id="sdr-method" class="method-detail ">
+          <a name="method-i-sdr"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">sdr</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Same as sensor, but the output is a bit more formatted for everyday use</p>
+            
+
+            
+            <div class="method-source-code" id="sdr-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-ipmitool.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sdr</span>
+  <span class="ruby-identifier">sdr_output</span> = <span class="ruby-identifier">run_command</span>(<span class="ruby-identifier">this_method_name</span>).<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+  <span class="ruby-identifier">sdr_hash</span> = <span class="ruby-identifier">split_output</span>(<span class="ruby-identifier">sdr_output</span>, <span class="ruby-string">'|'</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">sdr_hash</span> = <span class="ruby-identifier">sdr_hash</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sdr_hash</span>[<span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_sym</span>] = <span class="ruby-identifier">v</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\s\|\s/</span>) }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- sdr-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- sdr-method -->
+
+      
+        <div id="sel-method" class="method-detail ">
+          <a name="method-i-sel"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">sel</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>This function takes no arguments and returns logging output</p>
+            
+
+            
+            <div class="method-source-code" id="sel-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-ipmitool.rb, line 174</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sel</span>
+  <span class="ruby-identifier">sel_output</span> = <span class="ruby-identifier">run_command</span>(<span class="ruby-identifier">this_method_name</span>).<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;\n&quot;</span>).<span class="ruby-identifier">grep</span>(<span class="ruby-regexp">/:/</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">sel_hash</span> = <span class="ruby-identifier">split_output</span>(<span class="ruby-identifier">sel_output</span>, <span class="ruby-string">':'</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- sel-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- sel-method -->
+
+      
+        <div id="sensor-method" class="method-detail ">
+          <a name="method-i-sensor"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">sensor</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Read sensor data from ipmitool and return a hash containing the value</p>
+
+<p>Returned format is {:sensor_name =&gt; [‘value1’, ‘value2’]} Ex. <a
+href="Ipmitool.html#method-c-new">Ipmitool.new</a>(:host =&gt;
+‘192.168.1.1’, :user =&gt; ‘username’, :password =&gt;
+‘password’).sensor.fan1</p>
+            
+
+            
+            <div class="method-source-code" id="sensor-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-ipmitool.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sensor</span>
+  <span class="ruby-identifier">sensor_output</span> = <span class="ruby-identifier">run_command</span>(<span class="ruby-identifier">this_method_name</span>).<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+  <span class="ruby-identifier">sensor_hash</span> = <span class="ruby-identifier">split_output</span>(<span class="ruby-identifier">sensor_output</span>, <span class="ruby-string">'|'</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">sensor_hash</span> = <span class="ruby-identifier">sensor_hash</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sensor_hash</span>[<span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_sym</span>] = <span class="ruby-identifier">v</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp">/\s\|\s/</span>) }
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- sensor-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- sensor-method -->
+
+      
+        <div id="user-method" class="method-detail ">
+          <a name="method-i-user"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">user</span><span
+              class="method-args">(user_command, *command_args)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Add and modify users.</p>
+
+<p>set name, set password, disable, enable, and priv do not give output</p>
+            
+
+            
+            <div class="method-source-code" id="user-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-ipmitool.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">user</span>(<span class="ruby-identifier">user_command</span>, *<span class="ruby-identifier">command_args</span>)
+  <span class="ruby-identifier">user_hash</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">user_command</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;list&quot;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;List requires a channel number&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">command_args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">user_output</span> = <span class="ruby-identifier">run_command</span>(<span class="ruby-identifier">this_method_name</span>, <span class="ruby-node">&quot;#{user_command} #{command_args}&quot;</span>).<span class="ruby-identifier">grep</span>(<span class="ruby-regexp">/^[0-9]/</span>)
+    <span class="ruby-identifier">user_output</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span> <span class="ruby-identifier">user_hash</span>[<span class="ruby-node">&quot;uid#{u.split[0]}&quot;</span>.<span class="ruby-identifier">to_sym</span>] = <span class="ruby-identifier">u</span>.<span class="ruby-identifier">split</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>] }
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">user_hash</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;set name&quot;</span>, <span class="ruby-string">&quot;set password&quot;</span>, <span class="ruby-string">&quot;priv&quot;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;#{user_command} requires 2 arguments&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">command_args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">run_command</span>(<span class="ruby-identifier">this_method_name</span>, <span class="ruby-node">&quot;#{user_command} #{command_args.join(' ')}&quot;</span>)
+  <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;disable&quot;</span>, <span class="ruby-string">&quot;enable&quot;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;#{user_command} requires a UID&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">command_args</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-identifier">run_command</span>(<span class="ruby-identifier">this_method_name</span>, <span class="ruby-node">&quot;#{user_command} #{command_args}&quot;</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Invalid User Command&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- user-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- user-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(conn = {})</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Instantiates a new <a href="Ipmitool.html">Ipmitool</a> object.  Takes a
+hash containing :host, :user, and :password.</p>
+
+<p>Ex: <a href="Ipmitool.html#method-c-new">Ipmitool.new</a>(:host =&gt;
+‘192.168.1.1’, :user =&gt; ‘username’, :password =&gt;
+‘password’, :optional =&gt; {})</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File lib/ruby-ipmitool.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">conn</span> = {})
+  <span class="ruby-identifier">conn</span>[<span class="ruby-value">:check_host</span>] <span class="ruby-operator">||=</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Wrong number of arguments&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">conn</span>.<span class="ruby-identifier">count</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">4</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Host is required&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">conn</span>[<span class="ruby-value">:host</span>].<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;User is required&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">conn</span>[<span class="ruby-value">:user</span>].<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Password is required&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">conn</span>[<span class="ruby-value">:password</span>].<span class="ruby-identifier">nil?</span>
+  <span class="ruby-ivar">@conn</span> = <span class="ruby-identifier">conn</span>
+  <span class="ruby-ivar">@conn</span>[<span class="ruby-value">:binary</span>] = <span class="ruby-value">`which ipmitool`</span>.<span class="ruby-identifier">chomp</span>
+  <span class="ruby-identifier">binary</span> = <span class="ruby-identifier">system</span>(<span class="ruby-string">'which ipmitool &gt; /dev/null'</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Missing ipmitool&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">binary</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">conn</span>[<span class="ruby-value">:check_host</span>]
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Host is down or invalid!&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">check_host</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
