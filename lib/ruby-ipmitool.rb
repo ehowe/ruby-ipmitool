@@ -82,7 +82,9 @@ class Ipmitool
     when "power"
       raise ArgumentError, "#{chassis_command} requires an additional argument" if command_args.empty?
       chassis_output = run_command(this_method_name, "#{chassis_command} #{command_args}")
-      chassis_hash = split_output(chassis_output.to_a, ":")
+      unless chassis_output.nil?
+        chassis_hash = split_output(chassis_output.lines.to_a, ":")
+      end
       return chassis_hash
     when "policy"
       raise ArgumentError, "Policy requires a state" if command_args.empty?
