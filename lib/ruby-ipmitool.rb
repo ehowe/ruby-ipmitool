@@ -74,6 +74,7 @@ class Ipmitool
   #Ex ipmi.chassis("power", "on").chassis_power_control
   def chassis(chassis_command, *command_args)
     chassis_hash = Hash.new
+    command_args = command_args.join(" ")
     case chassis_command
     when "status", "restart_cause", "poh", "selftest"
       chassis_output = run_command(this_method_name, chassis_command)
@@ -179,7 +180,7 @@ class Ipmitool
   end
 
   private
-  def run_command(command, *args)
+  def run_command(command, args)
     optional = []
     if @conn[:optional]
         @conn[:optional].each { |key, value|
