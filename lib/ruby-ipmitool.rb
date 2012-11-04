@@ -119,6 +119,7 @@ class Ipmitool
   #The setaccess function gives no output
   def channel(channel_command, *command_args)
     channel_hash = Hash.new
+    command_args = command_args.join(" ")
     case channel_command
     when "authcap"
       raise ArgumentError, "Authcap requires a channel number and privilege" if command_args.empty?
@@ -156,6 +157,7 @@ class Ipmitool
   #set name, set password, disable, enable, and priv do not give output
   def user(user_command, *command_args)
     user_hash = Hash.new
+    command_args = command_args.join(" ")
     case user_command
     when "list"
       raise ArgumentError, "List requires a channel number" if command_args.empty?
