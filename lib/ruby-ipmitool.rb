@@ -74,6 +74,7 @@ class Ipmitool
   #Ex ipmi.chassis("power", "on").chassis_power_control
   def chassis(chassis_command, *command_args)
     chassis_hash = Hash.new
+    command_args = command_args.join(" ")
     case chassis_command
     when "status", "restart_cause", "poh", "selftest"
       chassis_output = run_command(this_method_name, chassis_command)
@@ -82,7 +83,9 @@ class Ipmitool
     when "power"
       raise ArgumentError, "#{chassis_command} requires an additional argument" if command_args.empty?
       chassis_output = run_command(this_method_name, "#{chassis_command} #{command_args}")
-      chassis_hash = split_output(chassis_output.to_a, ":")
+      unless chassis_output.nil?
+        chassis_hash = split_output(chassis_output.lines.to_a, ":")
+      end
       return chassis_hash
     when "policy"
       raise ArgumentError, "Policy requires a state" if command_args.empty?
@@ -116,6 +119,7 @@ class Ipmitool
   #The setaccess function gives no output
   def channel(channel_command, *command_args)
     channel_hash = Hash.new
+    command_args = command_args.join(" ")
     case channel_command
     when "authcap"
       raise ArgumentError, "Authcap requires a channel number and privilege" if command_args.empty?
@@ -153,6 +157,7 @@ class Ipmitool
   #set name, set password, disable, enable, and priv do not give output
   def user(user_command, *command_args)
     user_hash = Hash.new
+    command_args = command_args.join(" ")
     case user_command
     when "list"
       raise ArgumentError, "List requires a channel number" if command_args.empty?
@@ -177,7 +182,7 @@ class Ipmitool
   end
 
   private
-  def run_command(command, *args)
+  def run_command(command, args)
     optional = []
     if @conn[:optional]
         @conn[:optional].each { |key, value|
